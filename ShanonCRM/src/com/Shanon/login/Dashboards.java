@@ -1,4 +1,4 @@
-package com.Shanon.pages;
+package com.Shanon.login;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -6,19 +6,19 @@ import org.openqa.selenium.support.PageFactory;
 
 import com.Shanon.GenericLib.BaseTest;
 
-public class DashbordsPage {
+public class Dashboards {
+	@FindBy(xpath = "//a[text()='Dashboards']") private WebElement DashboardsTab;
 	
-@FindBy(xpath = "//a[text()='Dashboards']") private WebElement DashbordsTab;
-	
-	public void HomePage()
+	public Dashboards()
 	{
 		PageFactory.initElements(BaseTest.driver, this);
 	}
 	public WebElement getDashbordsTab() {
-		return DashbordsTab;
-		public void clickDashbordsTab()
-		{
-			DashbordsTab.click();
-		}
-}
+		return DashboardsTab;
+	}
+	
+	public void clickLeadsTab()
+	{
+		DashboardsTab.click();
+	}
 }
